@@ -106,6 +106,7 @@ async def screenshot(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         await update.message.reply_text(
             "📸 Screenshot received! Click below to verify:",
             reply_markup=InlineKeyboardMarkup(keyboard)
+        )
     else:
         await update.message.reply_text("⚠️ Please send a screenshot of your transaction")
     return SCREENSHOT

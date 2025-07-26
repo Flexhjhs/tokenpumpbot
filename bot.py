@@ -63,6 +63,7 @@ async def contract_info(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
             f"✅ Received {context.user_data['token']} contract!\n"
             "Choose a package:",
             reply_markup=InlineKeyboardMarkup(keyboard)
+        )
         return PAYMENT
     except Exception as e:
         logger.error(f"Contract error: {e}")
